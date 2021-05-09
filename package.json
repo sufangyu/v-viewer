@@ -1,0 +1,75 @@
+{
+  "name": "v-viewer",
+  "scope": "VueViewer",
+  "version": "2.0.0",
+  "description": "Image viewer component for vue, supports rotation, scale, zoom and so on, based on viewer.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "npm -C example run dev",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "example": "npm -C example run dev",
+    "commit": "npx git-cz",
+    "release-f": "standard-version -f",
+    "release-major": "standard-version -r major",
+    "release-minor": "standard-version -r minor",
+    "release-patch": "standard-version -r patch"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "viewer",
+    "gallery",
+    "picture",
+    "img",
+    "image"
+  ],
+  "license": "MIT",
+  "author": "mirari",
+  "bugs": {
+    "url": "https://github.com/mirari/v-viewer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirari/v-viewer.git"
+  },
+  "homepage": "https://github.com/mirari/v-viewer#readme",
+  "dependencies": {
+    "viewerjs": "^1.9.0",
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.6.4",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@types/lodash-es": "^4.17.4",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vue/compiler-sfc": "^3.0.5",
+    "commitizen": "^4.2.3",
+    "create-banner": "^2.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.25.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "standard-version": "^9.3.0",
+    "typescript": "^4.1.3",
+    "vite": "^2.2.3",
+    "vue-tsc": "^0.0.24"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

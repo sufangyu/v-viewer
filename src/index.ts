@@ -2,6 +2,7 @@ import type { App } from 'vue'
 import Viewer from 'viewerjs'
 import ViewerComponent from './component'
 import ViewerPreview from './preview'
+import ViewerDirective from './directive'
 import type { ViewerPreviewOptions, ViewerInstanceExposed } from './preview'
 
 interface InstallOptions {
@@ -27,6 +28,7 @@ export default {
     Viewer.setDefaults(defaultOptions)
 
     app.component(name, ViewerComponent)
+    app.use(ViewerDirective, { name, debug })
   },
   setDefaults(defaultOptions: Viewer.Options) {
     Viewer.setDefaults(defaultOptions)

@@ -45,6 +45,7 @@
   },
   "homepage": "https://github.com/mirari/v-viewer#readme",
   "dependencies": {
+    "lodash": "^4.17.21",
     "viewerjs": "^1.9.0",
     "vue": "^3.0.5"
   },

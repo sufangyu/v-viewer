@@ -24,6 +24,20 @@ const install = (Vue, {name = 'viewer', debug = false}) => {
       return
     }
     const observer = new MutationObserver(function (mutations) {
+      const matchImage = el.innerHTML.match(/<img([\w\W]+?)[\\/]?>/g)
+      // When there is no image, it is not recreated.
+      if (matchImage === null) {
+        log('observer no image')
+        return
+      }
+      // When there is no change, it is not recreated.
+      const $viewerNewImage = matchImage.join('')
+      if (el.$viewerOldImage === $viewerNewImage) {
+        log('observer no change')
+        return
+      } else {
+        el.$viewerOldImage = $viewerNewImage
+      }
       mutations.forEach(function (mutation) {
         log('viewer mutation:' + mutation.type)
         debouncedCreateViewer(el, options, rebuild)

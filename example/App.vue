@@ -18,8 +18,9 @@
       </div>
     </section>
     <div class="container" style="margin-bottom: 30px">
-      <example style="margin-bottom: 100px;"></example>
-      <doc class="markdown-body"></doc>
+      <bugs></bugs>
+      <!-- <example style="margin-bottom: 100px;"></example> -->
+      <!-- <doc class="markdown-body"></doc> -->
     </div>
     <footer class="footer">
       <div class="container">
@@ -42,13 +43,15 @@
 <script>
 import Doc from '../README.md'
 import Example from './views/example'
+import Bugs from './views/bugs'
 import 'github-markdown-css'
 import 'highlight.js/styles/github.css'
 
 export default {
   components: {
     Doc,
-    Example
+    Example,
+    Bugs
   }
 }
 </script>

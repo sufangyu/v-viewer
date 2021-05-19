@@ -1,5 +1,5 @@
 {
-  "name": "v-viewer",
+  "name": "@sufangyu/v-viewer",
   "scope": "VueViewer",
   "version": "2.0.0",
   "description": "Image viewer component for vue, supports rotation, scale, zoom and so on, based on viewer.js",
